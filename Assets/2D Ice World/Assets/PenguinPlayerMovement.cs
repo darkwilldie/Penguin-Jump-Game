@@ -8,6 +8,9 @@ public class PenguinPlayerMovement : MonoBehaviour
     public float jumpForce = 10f;
     private Rigidbody2D rb;
     private bool isGrounded;
+    public Transform groundCheck; // Assign in Inspector, place at player's feet
+    public float groundCheckRadius = 0.2f;
+    public LayerMask groundLayer; // Assign in Inspector to your ground layer
     private Vector3 originalScale;
     private bool facingRight = true;
 
@@ -37,7 +40,7 @@ public class PenguinPlayerMovement : MonoBehaviour
         }
 
         // Jump if grounded and jump key pressed
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if ((Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.W)) && isGrounded)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
@@ -45,30 +48,15 @@ public class PenguinPlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        // You can add physics-related code here if needed
-    }
-
-    // Simple ground check using collision
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.contacts.Length > 0)
+        // Reliable ground check using OverlapCircle
+        if (groundCheck != null)
         {
-            // Check if collision is from below
-            foreach (ContactPoint2D contact in collision.contacts)
-            {
-                if (contact.normal.y > 0.5f)
-                {
-                    isGrounded = true;
-                    break;
-                }
-            }
+            isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
         }
+        // ...existing code...
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        isGrounded = false;
-    }
+    // Remove old collision-based ground check
 
     private void OnTriggerEnter2D(Collider2D other)
     {
