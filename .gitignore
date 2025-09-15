@@ -1,0 +1,216 @@
+# Unity generated folders
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+UserSettings/
+
+# Asset meta data should only be versioned with the asset itself
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# Unity3D generated file on crash reports
+sysinfo.txt
+
+# Builds
+*.apk
+*.unitypackage
+
+# Visual Studio / MonoDevelop / JetBrains Rider
+.vs/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.VC.VC.opendb
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Crash logs
+crash-reports/
+
+# Exclude large files
+*.psd
+*.tiff
+*.tif
+*.wav
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.zip
+*.rar
+*.7z
+
+# Exclude auto-generated package cache
+Packages/PackageCache/
+
+# Exclude local package lock
+Packages/packages-lock.json
+
+# Exclude annotation and artifact DB
+Library/AnnotationManager
+Library/ArtifactDB*
+Library/expandedItems
+Library/ilpp.pid
+Library/ScriptMapper
+Library/SourceAssetDB*
+Library/SpriteAtlasDatabase.asset
+Library/Style.catalog
+Library/APIUpdater/
+Library/Artifacts/
+Library/Bee/
+Library/PackageCache/
+Library/PackageManager/
+Library/ScriptAssemblies/
+Library/Search/
+Library/ShaderCache/
+Library/StateCache/
+Library/TempArtifacts/
+
+# Exclude UnityLockfile
+Temp/UnityLockfile
+
+# Exclude process jobs
+Temp/ProcessJobs/
+
+# Exclude FSTimeGet temp files
+Temp/FSTimeGet-*
+
+# Exclude workspace layout
+UserSettings/Layouts/
+
+# Exclude Editor config
+ProjectSettings/EditorUserBuildSettings.asset
+
+# Exclude build player prefs
+Library/BuildPlayer.prefs
+
+# Exclude build settings
+Library/BuildSettings.asset
+
+# Exclude editor instance
+Library/EditorInstance.json
+
+# Exclude editor only scripting settings
+Library/EditorOnlyScriptingSettings.json
+
+# Exclude editor only virtual texture state
+Library/EditorOnlyVirtualTextureState.json
+
+# Exclude editor snap settings
+Library/EditorSnapSettings.asset
+
+# Exclude inspector expanded items
+Library/InspectorExpandedItems.asset
+
+# Exclude scene visibility state
+Library/SceneVisibilityState.asset
+
+# Exclude shader compiler logs
+Library/shadercompiler-*.log
+
+# Exclude version control settings
+ProjectSettings/VersionControlSettings.asset
+
+# Exclude VFX manager
+ProjectSettings/VFXManager.asset
+
+# Exclude XR settings
+ProjectSettings/XRSettings.asset
+
+# Exclude cluster input manager
+ProjectSettings/ClusterInputManager.asset
+
+# Exclude nav mesh areas
+ProjectSettings/NavMeshAreas.asset
+
+# Exclude memory settings
+ProjectSettings/MemorySettings.asset
+
+# Exclude physics 2D settings
+ProjectSettings/Physics2DSettings.asset
+
+# Exclude preset manager
+ProjectSettings/PresetManager.asset
+
+# Exclude quality settings
+ProjectSettings/QualitySettings.asset
+
+# Exclude scene template settings
+ProjectSettings/SceneTemplateSettings.json
+
+# Exclude tag manager
+ProjectSettings/TagManager.asset
+
+# Exclude time manager
+ProjectSettings/TimeManager.asset
+
+# Exclude unity connect settings
+ProjectSettings/UnityConnectSettings.asset
+
+# Exclude audio manager
+ProjectSettings/AudioManager.asset
+
+# Exclude graphics settings
+ProjectSettings/GraphicsSettings.asset
+
+# Exclude input manager
+ProjectSettings/InputManager.asset
+
+# Exclude project settings
+ProjectSettings/ProjectSettings.asset
+
+# Exclude project version
+ProjectSettings/ProjectVersion.txt
+
+# Exclude package manager settings
+ProjectSettings/PackageManagerSettings.asset
+
+# Exclude annotation manager
+Library/AnnotationManager
+
+# Exclude asset import worker logs
+Logs/AssetImportWorker*.log
+
+# Exclude shader compiler logs
+Logs/shadercompiler-*.log
+
+# Exclude packages update log
+Logs/Packages-Update.log
+
+# Exclude workspace search settings
+UserSettings/Search.settings
+
+# Exclude workspace expanded items
+Library/expandedItems
+
+# Exclude workspace style catalog
+Library/Style.catalog
+
+# Exclude workspace source asset DB lock
+Library/SourceAssetDB-lock
+
+# Exclude workspace artifact DB lock
+Library/ArtifactDB-lock
+
+# Exclude workspace library format version
+Library/LibraryFormatVersion.txt
