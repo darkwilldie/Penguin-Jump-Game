@@ -6,8 +6,9 @@
 [Bb]uilds/
 [Ll]ogs/
 UserSettings/
-Assets/TextMesh Pro/
-
+Assets/TextMesh Pro/*
+Assets/2D Ice World/Assets/VFX/*
+Assets/Thaleah_PixelFont/*
 # Asset meta data should only be versioned with the asset itself
 *.pidb.meta
 *.pdb.meta

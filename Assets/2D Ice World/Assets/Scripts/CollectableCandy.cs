@@ -4,17 +4,23 @@ using UnityEngine;
 
 public class CollectableCandy : MonoBehaviour
 {
-    public GameObject collectEffect; // Assign a visual effect prefab in Inspector
+    public GameObject collectEffect; // Assign in Inspector
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player")) // Make sure your player GameObject is tagged "Player"
+        if (other.CompareTag("Player"))
         {
             if (collectEffect != null)
             {
                 Instantiate(collectEffect, transform.position, Quaternion.identity);
             }
-            Destroy(gameObject); // Remove the candy
+            // Find and notify the manager
+            CollectableManager manager = FindObjectOfType<CollectableManager>();
+            if (manager != null)
+            {
+                manager.AddCollectable();
+            }
+            Destroy(gameObject);
         }
     }
 }
