@@ -6,6 +6,7 @@
 [Bb]uilds/
 [Ll]ogs/
 UserSettings/
+Assets/TextMesh Pro/
 
 # Asset meta data should only be versioned with the asset itself
 *.pidb.meta
