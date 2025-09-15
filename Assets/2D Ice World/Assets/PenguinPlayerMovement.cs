@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.UI; // If using legacy UI
+// using TMPro; // If using TextMeshPro
 
 public class PenguinPlayerMovement : MonoBehaviour
 {
@@ -8,6 +10,8 @@ public class PenguinPlayerMovement : MonoBehaviour
     private bool isGrounded;
     private Vector3 originalScale;
     private bool facingRight = true;
+
+    public GameObject gameOverText; // Assign in Inspector
 
     void Start()
     {
@@ -64,5 +68,17 @@ public class PenguinPlayerMovement : MonoBehaviour
     private void OnCollisionExit2D(Collision2D collision)
     {
         isGrounded = false;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("River")) // Tag your river GameObject as "River"
+        {
+            if (gameOverText != null)
+            {
+                gameOverText.SetActive(true);
+            }
+            // Optionally, disable player movement here
+        }
     }
 }
