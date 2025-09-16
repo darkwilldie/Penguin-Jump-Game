@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/2D Ice World/Assets/Scenes/World1.unity
+    guid: a5585a256be305140bac14dfbec28441
+  - enabled: 1
+    path: Assets/2D Ice World/Assets/Scenes/World2.unity
+    guid: eb552a452da80fd4fa74fa3eaab7008a
+  - enabled: 1
+    path: Assets/2D Ice World/Assets/Scenes/World3.unity
+    guid: db64d47a42922ff41b3943537c55c73a
   m_configObjects: {}

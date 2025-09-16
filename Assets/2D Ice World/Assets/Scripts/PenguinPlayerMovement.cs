@@ -10,7 +10,6 @@ public class PenguinPlayerMovement : MonoBehaviour
     private bool isGrounded;
     public Transform groundCheck; // Assign in Inspector, place at player's feet
     public float groundCheckRadius = 0.2f;
-    public float spikeCheckRadius = 0.3f; // Minimum radius to trigger game over
     public LayerMask groundLayer; // Assign in Inspector to your ground layer
     private Vector3 originalScale;
     private bool facingRight = true;
@@ -54,22 +53,13 @@ public class PenguinPlayerMovement : MonoBehaviour
         {
             isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
         }
-
-        // Spike detection
-        Collider2D spike = Physics2D.OverlapCircle(transform.position, spikeCheckRadius, groundLayer);
-        if (spike != null)
-        {
-            if (gameOverText != null)
-                gameOverText.SetActive(true);
-            // Optionally disable movement: this.enabled = false;
-        }
     }
 
     // Remove old collision-based ground check
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("River")) // Tag your river GameObject as "River"
+        if (other.CompareTag("Deadly")) // Tag your deadly GameObject as "Deadly"
         {
             if (gameOverText != null)
                 gameOverText.SetActive(true);
