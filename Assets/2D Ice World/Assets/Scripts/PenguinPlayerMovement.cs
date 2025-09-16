@@ -1,12 +1,14 @@
 using UnityEngine;
 using UnityEngine.UI; // If using legacy UI
 // using TMPro; // If using TextMeshPro
+using UnityEngine.SceneManagement;
 
 public class PenguinPlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
     private Rigidbody2D rb;
+    private bool gameOver = false;
     private bool isGrounded;
     public Transform groundCheck; // Assign in Inspector, place at player's feet
     public float groundCheckRadius = 0.2f;
@@ -25,6 +27,8 @@ public class PenguinPlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (gameOver) return;
+
         // Only allow left/right movement
         float moveInput = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
@@ -61,8 +65,16 @@ public class PenguinPlayerMovement : MonoBehaviour
     {
         if (other.CompareTag("Deadly")) // Tag your deadly GameObject as "Deadly"
         {
+            gameOver = true;
+            rb.velocity = Vector2.zero;
             if (gameOverText != null)
                 gameOverText.SetActive(true);
         }
+    }
+
+    // Call this from your UI Button's OnClick event
+    public void ReplayLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
